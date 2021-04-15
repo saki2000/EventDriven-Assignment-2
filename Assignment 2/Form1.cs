@@ -27,7 +27,7 @@ namespace Assignment_2
         struct ControlsUpdate
         {
             public double Throttle;
-            public double ElevetorPitch;
+            public double ElevatorPitch;
         }
 
         struct TelemetryUpdate
@@ -43,10 +43,9 @@ namespace Assignment_2
         //
         //declering delegates
         //
-        delegate void AddMessageDelegate(string message);       
-        //
-        //declering events
-        //
+        delegate void AddMessageDelegate(string message);
+        delegate void AddSendMessageDelegate(string message, ControlsUpdate controlsUpdate);
+
 
         public Form1()
         {
@@ -113,25 +112,8 @@ namespace Assignment_2
         //
         private void Listen()
         {
-            //////////////
-            //////////////  SOLUTION HAD TO USE AS MY PC WAS TO SLOW TO RECIVE STREAM
-            //////////////
+  
             NetworkStream stream = client.GetStream();
-            //byte[] next_byte = new byte[1];
-            //while (true)
-            //{
-            //    string message = "";
-            //    do
-            //    {
-            //        int num_bytes = stream.Read(next_byte, 0, 1);
-            //        message += Encoding.ASCII.GetString(next_byte, 0, num_bytes);
-            //    } while (next_byte[0] != '}');
-            //    addMessage(message);
-            //}
-
-            //////////////
-            ////////////// CORRECT SOLUTION
-            /////////////
 
             while (true)
             {
@@ -142,17 +124,11 @@ namespace Assignment_2
                 {
                     string message = Encoding.ASCII.GetString(buffer, 0, num_bytes);
                     //
-                    //contructing lambda inplace delegetor and calling to update lbl
-                    //
-                    Invoke(new Action(() => { lblJsonRecivedDisplay.Text = message; }));
-                    //
                     //passing messege to deserialisiation and updating grid
                     //
                     addMessage(message);
                 }
             }
-
-
         }
         //
         //Enabling Button and updating connection status
@@ -165,7 +141,7 @@ namespace Assignment_2
             btnSend.Enabled = true;
             btnTakeOff.Enabled = true;
             trkThrottle.Enabled = true;
-            trkElevetorPitch.Enabled = true;
+            trkElevatorPitch.Enabled = true;
             lblConnectionStatus.Text = "Connection Status: Connected";
             lblConnectionStatus.ForeColor = Color.Green;
         }
@@ -187,20 +163,22 @@ namespace Assignment_2
                 JavaScriptSerializer Serializer = new JavaScriptSerializer();
                 TelemetryUpdate recievedMessage = Serializer.Deserialize<TelemetryUpdate>(message);
                 //
-                //Updating current information labels
+                //Updating current information labels with rounding to 2decimal places
                 //
-                lblAltitude.Text = "Altitude: " + recievedMessage.Altitude;
-                lblSpeed.Text = "Speed: " + recievedMessage.Speed;
-                lblPitch.Text = "Pitch: " + recievedMessage.Pitch;
-                lblVerticalSpeed.Text = "Vertical Speed: " + recievedMessage.VerticalSpeed;
-                lblThrottle.Text = "Throttle: " + recievedMessage.Throttle;
-                lblElevetorPitch.Text = "Elevetor Pitch: " + recievedMessage.ElevatorPitch;
+                lblJsonRecivedDisplay.Text = message;
+                lblAltitudeVal.Text = Math.Round( recievedMessage.Altitude,2).ToString();
+                lblSpeedVal.Text = Math.Round(recievedMessage.Speed, 2).ToString();
+                lblPitchVal.Text = Math.Round(recievedMessage.Pitch,2).ToString();
+                lblVerticalSpeedVal.Text = Math.Round(recievedMessage.VerticalSpeed,2).ToString();
+                lblThrottleVal.Text = Math.Round(recievedMessage.Throttle,2).ToString();
+                lblElevatorPitchVal.Text = Math.Round(recievedMessage.ElevatorPitch,2).ToString();
                 //
-                //Upadate data grid
+                //Upadate data grid rounding 4decimal places 
+                //warning code displayed as enum, data is current date and time
                 //
-                dataGridView1.Rows.Insert(0,new object[] { recievedMessage.Altitude, recievedMessage.Speed,
-                    recievedMessage.Pitch, recievedMessage.VerticalSpeed, recievedMessage.Throttle,
-                    recievedMessage.ElevatorPitch, recievedMessage.WarningCode, DateTime.Now.ToString() });
+                dgvRecived.Rows.Insert(0,new object[] { Math.Round(recievedMessage.Altitude,4), Math.Round(recievedMessage.Speed,4),
+                    Math.Round(recievedMessage.Pitch,4), Math.Round(recievedMessage.VerticalSpeed,4), Math.Round(recievedMessage.Throttle,4),
+                    Math.Round(recievedMessage.ElevatorPitch,4), recievedMessage.WarningCode, DateTime.Now.ToString() });
                 //
                 // Updating Warning info label
                 //
@@ -238,16 +216,67 @@ namespace Assignment_2
 
         private void trkElevetorPitch_Scroll(object sender, EventArgs e)
         {
-            displayElevetorPitchValue();
+            displayElevatorPitchValue();
         }
         //
         //Updates elevetor pitch value
         //
-        private void displayElevetorPitchValue()
+        private void displayElevatorPitchValue()
         {
-            double val = trkElevetorPitch.Value;
+            double val = trkElevatorPitch.Value;
             val = val / 10;
             lblPitchControlValue.Text = val.ToString();
         }
+        //
+        // Adding Send messages to data grid and json
+        //
+        /// reciving string with JSON and struct to update fields
+        //
+        private void addSendMessage(string message, ControlsUpdate controlsUpdate) 
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new AddSendMessageDelegate(addSendMessage), new object[] { message, controlsUpdate });
+            }
+            else
+            {
+                //
+                //updating json lbl
+                //
+                lblJsonSendDisplay.Text = message;
+                //
+                // updating data grid
+                //
+                dgvSend.Rows.Insert(0, new object[] { controlsUpdate.Throttle, controlsUpdate.ElevatorPitch }); 
+            }
+        }
+        //
+        // Sending values from track bar to simulator
+        //
+        private void btnSend_Click(object sender, EventArgs e)
+        {
+            ControlsUpdate controlsUpdate = new ControlsUpdate();
+            //
+            // Assigning values from track bar to struck
+            //
+            controlsUpdate.Throttle = trkThrottle.Value;                
+            controlsUpdate.ElevatorPitch = Convert.ToDouble(trkElevatorPitch.Value)/10 ;
+            //
+            //   geting stream and sending serialized data     
+            //
+            JavaScriptSerializer Serializer = new JavaScriptSerializer();                                                            
+            string jsonString = Serializer.Serialize(controlsUpdate);
+            NetworkStream stream = client.GetStream();                       
+            byte[] rawData = Encoding.ASCII.GetBytes(jsonString);   // serializing data
+            stream.Write(rawData, 0, rawData.Length);               // writting to stream
+            //
+            // passing json string and struct so no deserlizsation will be needed
+            //
+            addSendMessage(jsonString, controlsUpdate);                    
+        }
+
     }
 }
+
+
+

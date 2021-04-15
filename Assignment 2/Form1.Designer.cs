@@ -29,6 +29,7 @@ namespace Assignment_2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnExit = new System.Windows.Forms.Button();
             this.txtPort = new System.Windows.Forms.TextBox();
             this.lblPort = new System.Windows.Forms.Label();
@@ -43,239 +44,220 @@ namespace Assignment_2
             this.lblPitch = new System.Windows.Forms.Label();
             this.lblVerticalSpeed = new System.Windows.Forms.Label();
             this.lblThrottle = new System.Windows.Forms.Label();
-            this.lblElevetorPitch = new System.Windows.Forms.Label();
+            this.lblElevatorPitch = new System.Windows.Forms.Label();
             this.lblJsonSendDisplay = new System.Windows.Forms.Label();
             this.lblJsonRecivedDisplay = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvRecived = new System.Windows.Forms.DataGridView();
             this.grbDataRecived = new System.Windows.Forms.GroupBox();
+            this.lblElevatorPitchVal = new System.Windows.Forms.Label();
+            this.lblThrottleVal = new System.Windows.Forms.Label();
+            this.lblVerticalSpeedVal = new System.Windows.Forms.Label();
+            this.lblPitchVal = new System.Windows.Forms.Label();
+            this.lblAltitudeVal = new System.Windows.Forms.Label();
+            this.lblSpeedVal = new System.Windows.Forms.Label();
             this.grbConnection = new System.Windows.Forms.GroupBox();
             this.cmbIPAdress = new System.Windows.Forms.ComboBox();
             this.lblIP = new System.Windows.Forms.Label();
             this.grbJsonSend = new System.Windows.Forms.GroupBox();
             this.grbJsonRecived = new System.Windows.Forms.GroupBox();
             this.grbControls = new System.Windows.Forms.GroupBox();
-            this.trkElevetorPitch = new System.Windows.Forms.TrackBar();
+            this.lbl0throttle = new System.Windows.Forms.Label();
+            this.lbl100throtle = new System.Windows.Forms.Label();
+            this.trkElevatorPitch = new System.Windows.Forms.TrackBar();
             this.trkThrottle = new System.Windows.Forms.TrackBar();
             this.lblElevatorPitchControl = new System.Windows.Forms.Label();
             this.lblThtottleControl = new System.Windows.Forms.Label();
             this.lblWarningDisplay = new System.Windows.Forms.Label();
             this.grbWarnings = new System.Windows.Forms.GroupBox();
-            this.Altitiude = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbAutomaticControls = new System.Windows.Forms.GroupBox();
+            this.dgvSend = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbl5Elevator = new System.Windows.Forms.Label();
+            this.lbl05Elevator = new System.Windows.Forms.Label();
+            this.txtSpeedAutoPilot = new System.Windows.Forms.TextBox();
+            this.txtAltAutoPilot = new System.Windows.Forms.TextBox();
+            this.lblAutoPilotSpeed = new System.Windows.Forms.Label();
+            this.lblAutoPilotAlt = new System.Windows.Forms.Label();
+            this.btnAutoPilot = new System.Windows.Forms.Button();
+            this.Altitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.VerticalSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Throttle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ElevetorPitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ElevatorPitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WarrningCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecived)).BeginInit();
             this.grbDataRecived.SuspendLayout();
             this.grbConnection.SuspendLayout();
             this.grbJsonSend.SuspendLayout();
             this.grbJsonRecived.SuspendLayout();
             this.grbControls.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trkElevetorPitch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trkElevatorPitch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkThrottle)).BeginInit();
             this.grbWarnings.SuspendLayout();
+            this.grbAutomaticControls.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSend)).BeginInit();
             this.SuspendLayout();
             // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.Location = new System.Drawing.Point(1256, 545);
+            resources.ApplyResources(this.btnExit, "btnExit");
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(115, 97);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "EXIT";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // txtPort
             // 
-            this.txtPort.Location = new System.Drawing.Point(90, 58);
+            resources.ApplyResources(this.txtPort, "txtPort");
             this.txtPort.Name = "txtPort";
-            this.txtPort.Size = new System.Drawing.Size(121, 20);
-            this.txtPort.TabIndex = 1;
-            this.txtPort.Text = "9999";
             // 
             // lblPort
             // 
-            this.lblPort.AutoSize = true;
-            this.lblPort.Location = new System.Drawing.Point(6, 58);
+            resources.ApplyResources(this.lblPort, "lblPort");
             this.lblPort.Name = "lblPort";
-            this.lblPort.Size = new System.Drawing.Size(26, 13);
-            this.lblPort.TabIndex = 3;
-            this.lblPort.Text = "Port";
             // 
             // lblConnectionStatus
             // 
-            this.lblConnectionStatus.AutoSize = true;
+            resources.ApplyResources(this.lblConnectionStatus, "lblConnectionStatus");
             this.lblConnectionStatus.ForeColor = System.Drawing.Color.Red;
-            this.lblConnectionStatus.Location = new System.Drawing.Point(6, 93);
             this.lblConnectionStatus.Name = "lblConnectionStatus";
-            this.lblConnectionStatus.Size = new System.Drawing.Size(166, 13);
-            this.lblConnectionStatus.TabIndex = 4;
-            this.lblConnectionStatus.Text = "Connection Status: Disconnected";
             // 
             // btnSend
             // 
-            this.btnSend.Enabled = false;
-            this.btnSend.Location = new System.Drawing.Point(41, 282);
+            resources.ApplyResources(this.btnSend, "btnSend");
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 23);
-            this.btnSend.TabIndex = 5;
-            this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnTakeOff
             // 
-            this.btnTakeOff.Enabled = false;
-            this.btnTakeOff.Location = new System.Drawing.Point(266, 282);
+            resources.ApplyResources(this.btnTakeOff, "btnTakeOff");
+            this.btnTakeOff.ForeColor = System.Drawing.Color.Blue;
             this.btnTakeOff.Name = "btnTakeOff";
-            this.btnTakeOff.Size = new System.Drawing.Size(75, 23);
-            this.btnTakeOff.TabIndex = 6;
-            this.btnTakeOff.Text = "Take OFF";
             this.btnTakeOff.UseVisualStyleBackColor = true;
             // 
             // lblThrottleControlValue
             // 
-            this.lblThrottleControlValue.AutoSize = true;
-            this.lblThrottleControlValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThrottleControlValue.Location = new System.Drawing.Point(128, 141);
+            resources.ApplyResources(this.lblThrottleControlValue, "lblThrottleControlValue");
             this.lblThrottleControlValue.Name = "lblThrottleControlValue";
-            this.lblThrottleControlValue.Size = new System.Drawing.Size(19, 20);
-            this.lblThrottleControlValue.TabIndex = 7;
-            this.lblThrottleControlValue.Text = "0";
             // 
             // lblPitchControlValue
             // 
-            this.lblPitchControlValue.AutoSize = true;
-            this.lblPitchControlValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPitchControlValue.Location = new System.Drawing.Point(359, 141);
+            resources.ApplyResources(this.lblPitchControlValue, "lblPitchControlValue");
             this.lblPitchControlValue.Name = "lblPitchControlValue";
-            this.lblPitchControlValue.Size = new System.Drawing.Size(19, 20);
-            this.lblPitchControlValue.TabIndex = 8;
-            this.lblPitchControlValue.Text = "0";
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(249, 58);
+            resources.ApplyResources(this.btnConnect, "btnConnect");
             this.btnConnect.Name = "btnConnect";
-            this.btnConnect.Size = new System.Drawing.Size(75, 23);
-            this.btnConnect.TabIndex = 9;
-            this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
             this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // lblAltitude
             // 
-            this.lblAltitude.AutoSize = true;
-            this.lblAltitude.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAltitude.Location = new System.Drawing.Point(6, 24);
+            resources.ApplyResources(this.lblAltitude, "lblAltitude");
             this.lblAltitude.Name = "lblAltitude";
-            this.lblAltitude.Size = new System.Drawing.Size(52, 16);
-            this.lblAltitude.TabIndex = 12;
-            this.lblAltitude.Text = "Altitude";
             // 
             // lblSpeed
             // 
-            this.lblSpeed.AutoSize = true;
-            this.lblSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpeed.Location = new System.Drawing.Point(6, 50);
+            resources.ApplyResources(this.lblSpeed, "lblSpeed");
             this.lblSpeed.Name = "lblSpeed";
-            this.lblSpeed.Size = new System.Drawing.Size(49, 16);
-            this.lblSpeed.TabIndex = 13;
-            this.lblSpeed.Text = "Speed";
             // 
             // lblPitch
             // 
-            this.lblPitch.AutoSize = true;
-            this.lblPitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPitch.Location = new System.Drawing.Point(6, 76);
+            resources.ApplyResources(this.lblPitch, "lblPitch");
             this.lblPitch.Name = "lblPitch";
-            this.lblPitch.Size = new System.Drawing.Size(37, 16);
-            this.lblPitch.TabIndex = 14;
-            this.lblPitch.Text = "Pitch";
             // 
             // lblVerticalSpeed
             // 
-            this.lblVerticalSpeed.AutoSize = true;
-            this.lblVerticalSpeed.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVerticalSpeed.Location = new System.Drawing.Point(196, 24);
+            resources.ApplyResources(this.lblVerticalSpeed, "lblVerticalSpeed");
             this.lblVerticalSpeed.Name = "lblVerticalSpeed";
-            this.lblVerticalSpeed.Size = new System.Drawing.Size(97, 16);
-            this.lblVerticalSpeed.TabIndex = 15;
-            this.lblVerticalSpeed.Text = "Vertical Speed";
             // 
             // lblThrottle
             // 
-            this.lblThrottle.AutoSize = true;
-            this.lblThrottle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThrottle.Location = new System.Drawing.Point(196, 50);
+            resources.ApplyResources(this.lblThrottle, "lblThrottle");
             this.lblThrottle.Name = "lblThrottle";
-            this.lblThrottle.Size = new System.Drawing.Size(53, 16);
-            this.lblThrottle.TabIndex = 16;
-            this.lblThrottle.Text = "Throttle";
             // 
-            // lblElevetorPitch
+            // lblElevatorPitch
             // 
-            this.lblElevetorPitch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElevetorPitch.Location = new System.Drawing.Point(196, 76);
-            this.lblElevetorPitch.Name = "lblElevetorPitch";
-            this.lblElevetorPitch.Size = new System.Drawing.Size(101, 18);
-            this.lblElevetorPitch.TabIndex = 17;
-            this.lblElevetorPitch.Text = "Elevetor Pitch";
+            resources.ApplyResources(this.lblElevatorPitch, "lblElevatorPitch");
+            this.lblElevatorPitch.Name = "lblElevatorPitch";
             // 
             // lblJsonSendDisplay
             // 
-            this.lblJsonSendDisplay.AutoSize = true;
-            this.lblJsonSendDisplay.Location = new System.Drawing.Point(6, 26);
+            resources.ApplyResources(this.lblJsonSendDisplay, "lblJsonSendDisplay");
             this.lblJsonSendDisplay.Name = "lblJsonSendDisplay";
-            this.lblJsonSendDisplay.Size = new System.Drawing.Size(10, 13);
-            this.lblJsonSendDisplay.TabIndex = 20;
-            this.lblJsonSendDisplay.Text = "-";
             // 
             // lblJsonRecivedDisplay
             // 
-            this.lblJsonRecivedDisplay.AutoSize = true;
-            this.lblJsonRecivedDisplay.Location = new System.Drawing.Point(6, 28);
+            resources.ApplyResources(this.lblJsonRecivedDisplay, "lblJsonRecivedDisplay");
             this.lblJsonRecivedDisplay.Name = "lblJsonRecivedDisplay";
-            this.lblJsonRecivedDisplay.Size = new System.Drawing.Size(10, 13);
-            this.lblJsonRecivedDisplay.TabIndex = 21;
-            this.lblJsonRecivedDisplay.Text = "-";
             // 
-            // dataGridView1
+            // dgvRecived
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Altitiude,
+            resources.ApplyResources(this.dgvRecived, "dgvRecived");
+            this.dgvRecived.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecived.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Altitude,
             this.Speed,
             this.Pitch,
             this.VerticalSpeed,
             this.Throttle,
-            this.ElevetorPitch,
+            this.ElevatorPitch,
             this.WarrningCode,
             this.TimeStamp});
-            this.dataGridView1.Location = new System.Drawing.Point(455, 163);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(728, 479);
-            this.dataGridView1.TabIndex = 22;
+            this.dgvRecived.Name = "dgvRecived";
             // 
             // grbDataRecived
             // 
+            this.grbDataRecived.Controls.Add(this.lblElevatorPitchVal);
+            this.grbDataRecived.Controls.Add(this.lblThrottleVal);
+            this.grbDataRecived.Controls.Add(this.lblVerticalSpeedVal);
+            this.grbDataRecived.Controls.Add(this.lblPitchVal);
+            this.grbDataRecived.Controls.Add(this.lblAltitudeVal);
+            this.grbDataRecived.Controls.Add(this.lblSpeedVal);
             this.grbDataRecived.Controls.Add(this.lblVerticalSpeed);
             this.grbDataRecived.Controls.Add(this.lblThrottle);
-            this.grbDataRecived.Controls.Add(this.lblElevetorPitch);
+            this.grbDataRecived.Controls.Add(this.lblElevatorPitch);
             this.grbDataRecived.Controls.Add(this.lblAltitude);
             this.grbDataRecived.Controls.Add(this.lblSpeed);
             this.grbDataRecived.Controls.Add(this.lblPitch);
-            this.grbDataRecived.Location = new System.Drawing.Point(12, 163);
+            resources.ApplyResources(this.grbDataRecived, "grbDataRecived");
             this.grbDataRecived.Name = "grbDataRecived";
-            this.grbDataRecived.Size = new System.Drawing.Size(436, 108);
-            this.grbDataRecived.TabIndex = 23;
             this.grbDataRecived.TabStop = false;
-            this.grbDataRecived.Text = "Data Recived";
+            // 
+            // lblElevatorPitchVal
+            // 
+            resources.ApplyResources(this.lblElevatorPitchVal, "lblElevatorPitchVal");
+            this.lblElevatorPitchVal.Name = "lblElevatorPitchVal";
+            // 
+            // lblThrottleVal
+            // 
+            resources.ApplyResources(this.lblThrottleVal, "lblThrottleVal");
+            this.lblThrottleVal.Name = "lblThrottleVal";
+            // 
+            // lblVerticalSpeedVal
+            // 
+            resources.ApplyResources(this.lblVerticalSpeedVal, "lblVerticalSpeedVal");
+            this.lblVerticalSpeedVal.Name = "lblVerticalSpeedVal";
+            // 
+            // lblPitchVal
+            // 
+            resources.ApplyResources(this.lblPitchVal, "lblPitchVal");
+            this.lblPitchVal.Name = "lblPitchVal";
+            // 
+            // lblAltitudeVal
+            // 
+            resources.ApplyResources(this.lblAltitudeVal, "lblAltitudeVal");
+            this.lblAltitudeVal.Name = "lblAltitudeVal";
+            // 
+            // lblSpeedVal
+            // 
+            resources.ApplyResources(this.lblSpeedVal, "lblSpeedVal");
+            this.lblSpeedVal.Name = "lblSpeedVal";
             // 
             // grbConnection
             // 
@@ -285,200 +267,231 @@ namespace Assignment_2
             this.grbConnection.Controls.Add(this.lblConnectionStatus);
             this.grbConnection.Controls.Add(this.lblPort);
             this.grbConnection.Controls.Add(this.btnConnect);
-            this.grbConnection.Location = new System.Drawing.Point(12, 11);
+            resources.ApplyResources(this.grbConnection, "grbConnection");
             this.grbConnection.Name = "grbConnection";
-            this.grbConnection.Size = new System.Drawing.Size(330, 126);
-            this.grbConnection.TabIndex = 24;
             this.grbConnection.TabStop = false;
-            this.grbConnection.Text = "Connection";
             // 
             // cmbIPAdress
             // 
             this.cmbIPAdress.FormattingEnabled = true;
-            this.cmbIPAdress.Location = new System.Drawing.Point(90, 16);
+            resources.ApplyResources(this.cmbIPAdress, "cmbIPAdress");
             this.cmbIPAdress.Name = "cmbIPAdress";
-            this.cmbIPAdress.Size = new System.Drawing.Size(121, 21);
-            this.cmbIPAdress.TabIndex = 10;
             // 
             // lblIP
             // 
-            this.lblIP.AutoSize = true;
-            this.lblIP.Location = new System.Drawing.Point(6, 24);
+            resources.ApplyResources(this.lblIP, "lblIP");
             this.lblIP.Name = "lblIP";
-            this.lblIP.Size = new System.Drawing.Size(52, 13);
-            this.lblIP.TabIndex = 5;
-            this.lblIP.Text = "IP Adress";
             // 
             // grbJsonSend
             // 
             this.grbJsonSend.Controls.Add(this.lblJsonSendDisplay);
-            this.grbJsonSend.Location = new System.Drawing.Point(348, 81);
+            resources.ApplyResources(this.grbJsonSend, "grbJsonSend");
             this.grbJsonSend.Name = "grbJsonSend";
-            this.grbJsonSend.Size = new System.Drawing.Size(863, 56);
-            this.grbJsonSend.TabIndex = 25;
             this.grbJsonSend.TabStop = false;
-            this.grbJsonSend.Text = "JSON Send";
             // 
             // grbJsonRecived
             // 
             this.grbJsonRecived.Controls.Add(this.lblJsonRecivedDisplay);
-            this.grbJsonRecived.Location = new System.Drawing.Point(348, 19);
+            resources.ApplyResources(this.grbJsonRecived, "grbJsonRecived");
             this.grbJsonRecived.Name = "grbJsonRecived";
-            this.grbJsonRecived.Size = new System.Drawing.Size(863, 56);
-            this.grbJsonRecived.TabIndex = 26;
             this.grbJsonRecived.TabStop = false;
-            this.grbJsonRecived.Text = "JSON Recived";
             // 
             // grbControls
             // 
-            this.grbControls.Controls.Add(this.trkElevetorPitch);
+            this.grbControls.Controls.Add(this.lbl05Elevator);
+            this.grbControls.Controls.Add(this.lbl5Elevator);
+            this.grbControls.Controls.Add(this.lbl0throttle);
+            this.grbControls.Controls.Add(this.lbl100throtle);
+            this.grbControls.Controls.Add(this.trkElevatorPitch);
             this.grbControls.Controls.Add(this.trkThrottle);
             this.grbControls.Controls.Add(this.lblElevatorPitchControl);
             this.grbControls.Controls.Add(this.lblThtottleControl);
-            this.grbControls.Controls.Add(this.btnTakeOff);
             this.grbControls.Controls.Add(this.btnSend);
             this.grbControls.Controls.Add(this.lblThrottleControlValue);
             this.grbControls.Controls.Add(this.lblPitchControlValue);
-            this.grbControls.Location = new System.Drawing.Point(12, 304);
+            resources.ApplyResources(this.grbControls, "grbControls");
             this.grbControls.Name = "grbControls";
-            this.grbControls.Size = new System.Drawing.Size(436, 338);
-            this.grbControls.TabIndex = 27;
             this.grbControls.TabStop = false;
-            this.grbControls.Text = "Controls";
             // 
-            // trkElevetorPitch
+            // lbl0throttle
             // 
-            this.trkElevetorPitch.Enabled = false;
-            this.trkElevetorPitch.Location = new System.Drawing.Point(284, 52);
-            this.trkElevetorPitch.Maximum = 50;
-            this.trkElevetorPitch.Minimum = -50;
-            this.trkElevetorPitch.Name = "trkElevetorPitch";
-            this.trkElevetorPitch.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trkElevetorPitch.Size = new System.Drawing.Size(45, 214);
-            this.trkElevetorPitch.TabIndex = 12;
-            this.trkElevetorPitch.TickStyle = System.Windows.Forms.TickStyle.Both;
-            this.trkElevetorPitch.Scroll += new System.EventHandler(this.trkElevetorPitch_Scroll);
+            resources.ApplyResources(this.lbl0throttle, "lbl0throttle");
+            this.lbl0throttle.Name = "lbl0throttle";
+            // 
+            // lbl100throtle
+            // 
+            resources.ApplyResources(this.lbl100throtle, "lbl100throtle");
+            this.lbl100throtle.Name = "lbl100throtle";
+            // 
+            // trkElevatorPitch
+            // 
+            resources.ApplyResources(this.trkElevatorPitch, "trkElevatorPitch");
+            this.trkElevatorPitch.Maximum = 50;
+            this.trkElevatorPitch.Minimum = -50;
+            this.trkElevatorPitch.Name = "trkElevatorPitch";
+            this.trkElevatorPitch.TickStyle = System.Windows.Forms.TickStyle.Both;
+            this.trkElevatorPitch.Scroll += new System.EventHandler(this.trkElevetorPitch_Scroll);
             // 
             // trkThrottle
             // 
             this.trkThrottle.Cursor = System.Windows.Forms.Cursors.Default;
-            this.trkThrottle.Enabled = false;
+            resources.ApplyResources(this.trkThrottle, "trkThrottle");
             this.trkThrottle.LargeChange = 3;
-            this.trkThrottle.Location = new System.Drawing.Point(57, 52);
             this.trkThrottle.Maximum = 100;
             this.trkThrottle.Name = "trkThrottle";
-            this.trkThrottle.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trkThrottle.Size = new System.Drawing.Size(45, 214);
-            this.trkThrottle.TabIndex = 11;
             this.trkThrottle.TickStyle = System.Windows.Forms.TickStyle.Both;
             this.trkThrottle.Scroll += new System.EventHandler(this.trkThrottle_Scroll);
             // 
             // lblElevatorPitchControl
             // 
-            this.lblElevatorPitchControl.AutoSize = true;
-            this.lblElevatorPitchControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblElevatorPitchControl.Location = new System.Drawing.Point(254, 29);
+            resources.ApplyResources(this.lblElevatorPitchControl, "lblElevatorPitchControl");
             this.lblElevatorPitchControl.Name = "lblElevatorPitchControl";
-            this.lblElevatorPitchControl.Size = new System.Drawing.Size(106, 20);
-            this.lblElevatorPitchControl.TabIndex = 10;
-            this.lblElevatorPitchControl.Text = "Elevetor Pitch";
             // 
             // lblThtottleControl
             // 
-            this.lblThtottleControl.AutoSize = true;
-            this.lblThtottleControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblThtottleControl.Location = new System.Drawing.Point(53, 29);
+            resources.ApplyResources(this.lblThtottleControl, "lblThtottleControl");
             this.lblThtottleControl.Name = "lblThtottleControl";
-            this.lblThtottleControl.Size = new System.Drawing.Size(63, 20);
-            this.lblThtottleControl.TabIndex = 9;
-            this.lblThtottleControl.Text = "Throttle";
             // 
             // lblWarningDisplay
             // 
-            this.lblWarningDisplay.AutoSize = true;
-            this.lblWarningDisplay.Enabled = false;
-            this.lblWarningDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.lblWarningDisplay, "lblWarningDisplay");
             this.lblWarningDisplay.ForeColor = System.Drawing.Color.Red;
-            this.lblWarningDisplay.Location = new System.Drawing.Point(6, 41);
             this.lblWarningDisplay.Name = "lblWarningDisplay";
-            this.lblWarningDisplay.Size = new System.Drawing.Size(0, 25);
-            this.lblWarningDisplay.TabIndex = 28;
             // 
             // grbWarnings
             // 
             this.grbWarnings.Controls.Add(this.lblWarningDisplay);
-            this.grbWarnings.Location = new System.Drawing.Point(1189, 163);
+            resources.ApplyResources(this.grbWarnings, "grbWarnings");
             this.grbWarnings.Name = "grbWarnings";
-            this.grbWarnings.Size = new System.Drawing.Size(182, 100);
-            this.grbWarnings.TabIndex = 29;
             this.grbWarnings.TabStop = false;
-            this.grbWarnings.Text = "WARNINGS";
             // 
-            // Altitiude
+            // grbAutomaticControls
             // 
-            this.Altitiude.HeaderText = "Altitiude";
-            this.Altitiude.Name = "Altitiude";
-            this.Altitiude.Width = 80;
+            this.grbAutomaticControls.Controls.Add(this.btnAutoPilot);
+            this.grbAutomaticControls.Controls.Add(this.lblAutoPilotAlt);
+            this.grbAutomaticControls.Controls.Add(this.lblAutoPilotSpeed);
+            this.grbAutomaticControls.Controls.Add(this.txtAltAutoPilot);
+            this.grbAutomaticControls.Controls.Add(this.txtSpeedAutoPilot);
+            this.grbAutomaticControls.Controls.Add(this.btnTakeOff);
+            resources.ApplyResources(this.grbAutomaticControls, "grbAutomaticControls");
+            this.grbAutomaticControls.Name = "grbAutomaticControls";
+            this.grbAutomaticControls.TabStop = false;
+            // 
+            // dgvSend
+            // 
+            this.dgvSend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSend.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            resources.ApplyResources(this.dgvSend, "dgvSend");
+            this.dgvSend.Name = "dgvSend";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.FillWeight = 140F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn5, "dataGridViewTextBoxColumn5");
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.FillWeight = 140F;
+            resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            // 
+            // lbl5Elevator
+            // 
+            resources.ApplyResources(this.lbl5Elevator, "lbl5Elevator");
+            this.lbl5Elevator.Name = "lbl5Elevator";
+            // 
+            // lbl05Elevator
+            // 
+            resources.ApplyResources(this.lbl05Elevator, "lbl05Elevator");
+            this.lbl05Elevator.Name = "lbl05Elevator";
+            // 
+            // txtSpeedAutoPilot
+            // 
+            resources.ApplyResources(this.txtSpeedAutoPilot, "txtSpeedAutoPilot");
+            this.txtSpeedAutoPilot.Name = "txtSpeedAutoPilot";
+            // 
+            // txtAltAutoPilot
+            // 
+            resources.ApplyResources(this.txtAltAutoPilot, "txtAltAutoPilot");
+            this.txtAltAutoPilot.Name = "txtAltAutoPilot";
+            // 
+            // lblAutoPilotSpeed
+            // 
+            resources.ApplyResources(this.lblAutoPilotSpeed, "lblAutoPilotSpeed");
+            this.lblAutoPilotSpeed.Name = "lblAutoPilotSpeed";
+            // 
+            // lblAutoPilotAlt
+            // 
+            resources.ApplyResources(this.lblAutoPilotAlt, "lblAutoPilotAlt");
+            this.lblAutoPilotAlt.Name = "lblAutoPilotAlt";
+            // 
+            // btnAutoPilot
+            // 
+            resources.ApplyResources(this.btnAutoPilot, "btnAutoPilot");
+            this.btnAutoPilot.ForeColor = System.Drawing.Color.Red;
+            this.btnAutoPilot.Name = "btnAutoPilot";
+            this.btnAutoPilot.UseVisualStyleBackColor = true;
+            // 
+            // Altitude
+            // 
+            resources.ApplyResources(this.Altitude, "Altitude");
+            this.Altitude.Name = "Altitude";
             // 
             // Speed
             // 
-            this.Speed.HeaderText = "Speed";
+            resources.ApplyResources(this.Speed, "Speed");
             this.Speed.Name = "Speed";
-            this.Speed.Width = 80;
             // 
             // Pitch
             // 
-            this.Pitch.HeaderText = "Pitch";
+            resources.ApplyResources(this.Pitch, "Pitch");
             this.Pitch.Name = "Pitch";
-            this.Pitch.Width = 80;
             // 
             // VerticalSpeed
             // 
-            this.VerticalSpeed.HeaderText = "Vertical Speed";
+            resources.ApplyResources(this.VerticalSpeed, "VerticalSpeed");
             this.VerticalSpeed.Name = "VerticalSpeed";
-            this.VerticalSpeed.Width = 80;
             // 
             // Throttle
             // 
-            this.Throttle.HeaderText = "Throttle";
+            resources.ApplyResources(this.Throttle, "Throttle");
             this.Throttle.Name = "Throttle";
-            this.Throttle.Width = 80;
             // 
-            // ElevetorPitch
+            // ElevatorPitch
             // 
-            this.ElevetorPitch.HeaderText = "Elevetor Pitch";
-            this.ElevetorPitch.Name = "ElevetorPitch";
-            this.ElevetorPitch.Width = 80;
+            resources.ApplyResources(this.ElevatorPitch, "ElevatorPitch");
+            this.ElevatorPitch.Name = "ElevatorPitch";
             // 
             // WarrningCode
             // 
-            this.WarrningCode.HeaderText = "Warrning Code";
+            resources.ApplyResources(this.WarrningCode, "WarrningCode");
             this.WarrningCode.Name = "WarrningCode";
-            this.WarrningCode.Width = 80;
             // 
             // TimeStamp
             // 
-            this.TimeStamp.HeaderText = "Time Stamp";
+            resources.ApplyResources(this.TimeStamp, "TimeStamp");
             this.TimeStamp.Name = "TimeStamp";
-            this.TimeStamp.Width = 120;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1428, 647);
             this.ControlBox = false;
+            this.Controls.Add(this.dgvSend);
             this.Controls.Add(this.grbWarnings);
+            this.Controls.Add(this.grbAutomaticControls);
             this.Controls.Add(this.grbControls);
             this.Controls.Add(this.grbJsonRecived);
             this.Controls.Add(this.grbJsonSend);
             this.Controls.Add(this.grbConnection);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvRecived);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grbDataRecived);
             this.Name = "Form1";
-            this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecived)).EndInit();
             this.grbDataRecived.ResumeLayout(false);
             this.grbDataRecived.PerformLayout();
             this.grbConnection.ResumeLayout(false);
@@ -489,10 +502,13 @@ namespace Assignment_2
             this.grbJsonRecived.PerformLayout();
             this.grbControls.ResumeLayout(false);
             this.grbControls.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trkElevetorPitch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trkElevatorPitch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trkThrottle)).EndInit();
             this.grbWarnings.ResumeLayout(false);
             this.grbWarnings.PerformLayout();
+            this.grbAutomaticControls.ResumeLayout(false);
+            this.grbAutomaticControls.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSend)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -512,11 +528,11 @@ namespace Assignment_2
         private System.Windows.Forms.Label lblPitch;
         private System.Windows.Forms.Label lblVerticalSpeed;
         private System.Windows.Forms.Label lblThrottle;
-        private System.Windows.Forms.Label lblElevetorPitch;
+        private System.Windows.Forms.Label lblElevatorPitch;
         private System.Windows.Forms.Label lblConnectionStatus;
         private System.Windows.Forms.Label lblJsonSendDisplay;
         private System.Windows.Forms.Label lblJsonRecivedDisplay;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvRecived;
         private System.Windows.Forms.GroupBox grbDataRecived;
         private System.Windows.Forms.GroupBox grbConnection;
         private System.Windows.Forms.Label lblIP;
@@ -525,19 +541,38 @@ namespace Assignment_2
         private System.Windows.Forms.GroupBox grbControls;
         private System.Windows.Forms.Label lblElevatorPitchControl;
         private System.Windows.Forms.Label lblThtottleControl;
-        private System.Windows.Forms.TrackBar trkElevetorPitch;
+        private System.Windows.Forms.TrackBar trkElevatorPitch;
         private System.Windows.Forms.TrackBar trkThrottle;
         private System.Windows.Forms.ComboBox cmbIPAdress;
         private System.Windows.Forms.Label lblWarningDisplay;
         private System.Windows.Forms.GroupBox grbWarnings;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Altitiude;
+        private System.Windows.Forms.GroupBox grbAutomaticControls;
+        private System.Windows.Forms.DataGridView dgvSend;
+        private System.Windows.Forms.Label lblSpeedVal;
+        private System.Windows.Forms.Label lblAltitudeVal;
+        private System.Windows.Forms.Label lblPitchVal;
+        private System.Windows.Forms.Label lblVerticalSpeedVal;
+        private System.Windows.Forms.Label lblThrottleVal;
+        private System.Windows.Forms.Label lblElevatorPitchVal;
+        private System.Windows.Forms.Label lbl0throttle;
+        private System.Windows.Forms.Label lbl100throtle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label lbl05Elevator;
+        private System.Windows.Forms.Label lbl5Elevator;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Altitude;
         private System.Windows.Forms.DataGridViewTextBoxColumn Speed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pitch;
         private System.Windows.Forms.DataGridViewTextBoxColumn VerticalSpeed;
         private System.Windows.Forms.DataGridViewTextBoxColumn Throttle;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ElevetorPitch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ElevatorPitch;
         private System.Windows.Forms.DataGridViewTextBoxColumn WarrningCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeStamp;
+        private System.Windows.Forms.Button btnAutoPilot;
+        private System.Windows.Forms.Label lblAutoPilotAlt;
+        private System.Windows.Forms.Label lblAutoPilotSpeed;
+        private System.Windows.Forms.TextBox txtAltAutoPilot;
+        private System.Windows.Forms.TextBox txtSpeedAutoPilot;
     }
 }
 
