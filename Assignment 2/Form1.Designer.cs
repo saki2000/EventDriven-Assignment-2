@@ -34,7 +34,6 @@ namespace Assignment_2
             this.txtPort = new System.Windows.Forms.TextBox();
             this.lblPort = new System.Windows.Forms.Label();
             this.lblConnectionStatus = new System.Windows.Forms.Label();
-            this.btnSend = new System.Windows.Forms.Button();
             this.btnTakeOff = new System.Windows.Forms.Button();
             this.lblThrottleControlValue = new System.Windows.Forms.Label();
             this.lblPitchControlValue = new System.Windows.Forms.Label();
@@ -48,6 +47,14 @@ namespace Assignment_2
             this.lblJsonSendDisplay = new System.Windows.Forms.Label();
             this.lblJsonRecivedDisplay = new System.Windows.Forms.Label();
             this.dgvRecived = new System.Windows.Forms.DataGridView();
+            this.Altitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VerticalSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Throttle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ElevatorPitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.WarrningCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grbDataRecived = new System.Windows.Forms.GroupBox();
             this.lblElevatorPitchVal = new System.Windows.Forms.Label();
             this.lblThrottleVal = new System.Windows.Forms.Label();
@@ -61,6 +68,8 @@ namespace Assignment_2
             this.grbJsonSend = new System.Windows.Forms.GroupBox();
             this.grbJsonRecived = new System.Windows.Forms.GroupBox();
             this.grbControls = new System.Windows.Forms.GroupBox();
+            this.lbl05Elevator = new System.Windows.Forms.Label();
+            this.lbl5Elevator = new System.Windows.Forms.Label();
             this.lbl0throttle = new System.Windows.Forms.Label();
             this.lbl100throtle = new System.Windows.Forms.Label();
             this.trkElevatorPitch = new System.Windows.Forms.TrackBar();
@@ -70,24 +79,14 @@ namespace Assignment_2
             this.lblWarningDisplay = new System.Windows.Forms.Label();
             this.grbWarnings = new System.Windows.Forms.GroupBox();
             this.grbAutomaticControls = new System.Windows.Forms.GroupBox();
+            this.btnAutoPilot = new System.Windows.Forms.Button();
+            this.lblAutoPilotAlt = new System.Windows.Forms.Label();
+            this.lblAutoPilotSpeed = new System.Windows.Forms.Label();
+            this.txtAltAutoPilot = new System.Windows.Forms.TextBox();
+            this.txtSpeedAutoPilot = new System.Windows.Forms.TextBox();
             this.dgvSend = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbl5Elevator = new System.Windows.Forms.Label();
-            this.lbl05Elevator = new System.Windows.Forms.Label();
-            this.txtSpeedAutoPilot = new System.Windows.Forms.TextBox();
-            this.txtAltAutoPilot = new System.Windows.Forms.TextBox();
-            this.lblAutoPilotSpeed = new System.Windows.Forms.Label();
-            this.lblAutoPilotAlt = new System.Windows.Forms.Label();
-            this.btnAutoPilot = new System.Windows.Forms.Button();
-            this.Altitude = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Speed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.VerticalSpeed = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Throttle = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ElevatorPitch = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WarrningCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeStamp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecived)).BeginInit();
             this.grbDataRecived.SuspendLayout();
             this.grbConnection.SuspendLayout();
@@ -125,19 +124,13 @@ namespace Assignment_2
             this.lblConnectionStatus.ForeColor = System.Drawing.Color.Red;
             this.lblConnectionStatus.Name = "lblConnectionStatus";
             // 
-            // btnSend
-            // 
-            resources.ApplyResources(this.btnSend, "btnSend");
-            this.btnSend.Name = "btnSend";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
             // btnTakeOff
             // 
             resources.ApplyResources(this.btnTakeOff, "btnTakeOff");
             this.btnTakeOff.ForeColor = System.Drawing.Color.Blue;
             this.btnTakeOff.Name = "btnTakeOff";
             this.btnTakeOff.UseVisualStyleBackColor = true;
+            this.btnTakeOff.Click += new System.EventHandler(this.btnTakeOff_Click);
             // 
             // lblThrottleControlValue
             // 
@@ -210,6 +203,46 @@ namespace Assignment_2
             this.WarrningCode,
             this.TimeStamp});
             this.dgvRecived.Name = "dgvRecived";
+            // 
+            // Altitude
+            // 
+            resources.ApplyResources(this.Altitude, "Altitude");
+            this.Altitude.Name = "Altitude";
+            // 
+            // Speed
+            // 
+            resources.ApplyResources(this.Speed, "Speed");
+            this.Speed.Name = "Speed";
+            // 
+            // Pitch
+            // 
+            resources.ApplyResources(this.Pitch, "Pitch");
+            this.Pitch.Name = "Pitch";
+            // 
+            // VerticalSpeed
+            // 
+            resources.ApplyResources(this.VerticalSpeed, "VerticalSpeed");
+            this.VerticalSpeed.Name = "VerticalSpeed";
+            // 
+            // Throttle
+            // 
+            resources.ApplyResources(this.Throttle, "Throttle");
+            this.Throttle.Name = "Throttle";
+            // 
+            // ElevatorPitch
+            // 
+            resources.ApplyResources(this.ElevatorPitch, "ElevatorPitch");
+            this.ElevatorPitch.Name = "ElevatorPitch";
+            // 
+            // WarrningCode
+            // 
+            resources.ApplyResources(this.WarrningCode, "WarrningCode");
+            this.WarrningCode.Name = "WarrningCode";
+            // 
+            // TimeStamp
+            // 
+            resources.ApplyResources(this.TimeStamp, "TimeStamp");
+            this.TimeStamp.Name = "TimeStamp";
             // 
             // grbDataRecived
             // 
@@ -306,12 +339,21 @@ namespace Assignment_2
             this.grbControls.Controls.Add(this.trkThrottle);
             this.grbControls.Controls.Add(this.lblElevatorPitchControl);
             this.grbControls.Controls.Add(this.lblThtottleControl);
-            this.grbControls.Controls.Add(this.btnSend);
             this.grbControls.Controls.Add(this.lblThrottleControlValue);
             this.grbControls.Controls.Add(this.lblPitchControlValue);
             resources.ApplyResources(this.grbControls, "grbControls");
             this.grbControls.Name = "grbControls";
             this.grbControls.TabStop = false;
+            // 
+            // lbl05Elevator
+            // 
+            resources.ApplyResources(this.lbl05Elevator, "lbl05Elevator");
+            this.lbl05Elevator.Name = "lbl05Elevator";
+            // 
+            // lbl5Elevator
+            // 
+            resources.ApplyResources(this.lbl5Elevator, "lbl5Elevator");
+            this.lbl5Elevator.Name = "lbl5Elevator";
             // 
             // lbl0throttle
             // 
@@ -377,6 +419,33 @@ namespace Assignment_2
             this.grbAutomaticControls.Name = "grbAutomaticControls";
             this.grbAutomaticControls.TabStop = false;
             // 
+            // btnAutoPilot
+            // 
+            resources.ApplyResources(this.btnAutoPilot, "btnAutoPilot");
+            this.btnAutoPilot.ForeColor = System.Drawing.Color.Red;
+            this.btnAutoPilot.Name = "btnAutoPilot";
+            this.btnAutoPilot.UseVisualStyleBackColor = true;
+            // 
+            // lblAutoPilotAlt
+            // 
+            resources.ApplyResources(this.lblAutoPilotAlt, "lblAutoPilotAlt");
+            this.lblAutoPilotAlt.Name = "lblAutoPilotAlt";
+            // 
+            // lblAutoPilotSpeed
+            // 
+            resources.ApplyResources(this.lblAutoPilotSpeed, "lblAutoPilotSpeed");
+            this.lblAutoPilotSpeed.Name = "lblAutoPilotSpeed";
+            // 
+            // txtAltAutoPilot
+            // 
+            resources.ApplyResources(this.txtAltAutoPilot, "txtAltAutoPilot");
+            this.txtAltAutoPilot.Name = "txtAltAutoPilot";
+            // 
+            // txtSpeedAutoPilot
+            // 
+            resources.ApplyResources(this.txtSpeedAutoPilot, "txtSpeedAutoPilot");
+            this.txtSpeedAutoPilot.Name = "txtSpeedAutoPilot";
+            // 
             // dgvSend
             // 
             this.dgvSend.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -397,83 +466,6 @@ namespace Assignment_2
             this.dataGridViewTextBoxColumn6.FillWeight = 140F;
             resources.ApplyResources(this.dataGridViewTextBoxColumn6, "dataGridViewTextBoxColumn6");
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // lbl5Elevator
-            // 
-            resources.ApplyResources(this.lbl5Elevator, "lbl5Elevator");
-            this.lbl5Elevator.Name = "lbl5Elevator";
-            // 
-            // lbl05Elevator
-            // 
-            resources.ApplyResources(this.lbl05Elevator, "lbl05Elevator");
-            this.lbl05Elevator.Name = "lbl05Elevator";
-            // 
-            // txtSpeedAutoPilot
-            // 
-            resources.ApplyResources(this.txtSpeedAutoPilot, "txtSpeedAutoPilot");
-            this.txtSpeedAutoPilot.Name = "txtSpeedAutoPilot";
-            // 
-            // txtAltAutoPilot
-            // 
-            resources.ApplyResources(this.txtAltAutoPilot, "txtAltAutoPilot");
-            this.txtAltAutoPilot.Name = "txtAltAutoPilot";
-            // 
-            // lblAutoPilotSpeed
-            // 
-            resources.ApplyResources(this.lblAutoPilotSpeed, "lblAutoPilotSpeed");
-            this.lblAutoPilotSpeed.Name = "lblAutoPilotSpeed";
-            // 
-            // lblAutoPilotAlt
-            // 
-            resources.ApplyResources(this.lblAutoPilotAlt, "lblAutoPilotAlt");
-            this.lblAutoPilotAlt.Name = "lblAutoPilotAlt";
-            // 
-            // btnAutoPilot
-            // 
-            resources.ApplyResources(this.btnAutoPilot, "btnAutoPilot");
-            this.btnAutoPilot.ForeColor = System.Drawing.Color.Red;
-            this.btnAutoPilot.Name = "btnAutoPilot";
-            this.btnAutoPilot.UseVisualStyleBackColor = true;
-            // 
-            // Altitude
-            // 
-            resources.ApplyResources(this.Altitude, "Altitude");
-            this.Altitude.Name = "Altitude";
-            // 
-            // Speed
-            // 
-            resources.ApplyResources(this.Speed, "Speed");
-            this.Speed.Name = "Speed";
-            // 
-            // Pitch
-            // 
-            resources.ApplyResources(this.Pitch, "Pitch");
-            this.Pitch.Name = "Pitch";
-            // 
-            // VerticalSpeed
-            // 
-            resources.ApplyResources(this.VerticalSpeed, "VerticalSpeed");
-            this.VerticalSpeed.Name = "VerticalSpeed";
-            // 
-            // Throttle
-            // 
-            resources.ApplyResources(this.Throttle, "Throttle");
-            this.Throttle.Name = "Throttle";
-            // 
-            // ElevatorPitch
-            // 
-            resources.ApplyResources(this.ElevatorPitch, "ElevatorPitch");
-            this.ElevatorPitch.Name = "ElevatorPitch";
-            // 
-            // WarrningCode
-            // 
-            resources.ApplyResources(this.WarrningCode, "WarrningCode");
-            this.WarrningCode.Name = "WarrningCode";
-            // 
-            // TimeStamp
-            // 
-            resources.ApplyResources(this.TimeStamp, "TimeStamp");
-            this.TimeStamp.Name = "TimeStamp";
             // 
             // Form1
             // 
@@ -518,7 +510,6 @@ namespace Assignment_2
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.TextBox txtPort;
         private System.Windows.Forms.Label lblPort;
-        private System.Windows.Forms.Button btnSend;
         private System.Windows.Forms.Button btnTakeOff;
         private System.Windows.Forms.Label lblThrottleControlValue;
         private System.Windows.Forms.Label lblPitchControlValue;

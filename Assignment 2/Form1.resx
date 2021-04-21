@@ -224,33 +224,6 @@
   <data name="&gt;&gt;lblConnectionStatus.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="btnSend.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnSend.Location" type="System.Drawing.Point, System.Drawing">
-    <value>41, 258</value>
-  </data>
-  <data name="btnSend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>131, 45</value>
-  </data>
-  <data name="btnSend.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnSend.Text" xml:space="preserve">
-    <value>Send</value>
-  </data>
-  <data name="&gt;&gt;btnSend.Name" xml:space="preserve">
-    <value>btnSend</value>
-  </data>
-  <data name="&gt;&gt;btnSend.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSend.Parent" xml:space="preserve">
-    <value>grbControls</value>
-  </data>
-  <data name="&gt;&gt;btnSend.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
   <data name="btnTakeOff.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
@@ -288,7 +261,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="lblThrottleControlValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 134</value>
+    <value>6, 163</value>
   </data>
   <data name="lblThrottleControlValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>39, 20</value>
@@ -309,7 +282,7 @@
     <value>grbControls</value>
   </data>
   <data name="&gt;&gt;lblThrottleControlValue.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="lblPitchControlValue.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -318,7 +291,7 @@
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
   <data name="lblPitchControlValue.Location" type="System.Drawing.Point, System.Drawing">
-    <value>178, 134</value>
+    <value>168, 163</value>
   </data>
   <data name="lblPitchControlValue.Size" type="System.Drawing.Size, System.Drawing">
     <value>34, 20</value>
@@ -339,7 +312,7 @@
     <value>grbControls</value>
   </data>
   <data name="&gt;&gt;lblPitchControlValue.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="btnConnect.Location" type="System.Drawing.Point, System.Drawing">
     <value>249, 58</value>
@@ -646,6 +619,78 @@
   </data>
   <data name="&gt;&gt;dgvRecived.ZOrder" xml:space="preserve">
     <value>7</value>
+  </data>
+  <metadata name="Altitude.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Altitude.HeaderText" xml:space="preserve">
+    <value>Altitiude</value>
+  </data>
+  <data name="Altitude.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="Speed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Speed.HeaderText" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Speed.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="Pitch.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Pitch.HeaderText" xml:space="preserve">
+    <value>Pitch</value>
+  </data>
+  <data name="Pitch.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="VerticalSpeed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="VerticalSpeed.HeaderText" xml:space="preserve">
+    <value>Vertical Speed</value>
+  </data>
+  <data name="VerticalSpeed.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="Throttle.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="Throttle.HeaderText" xml:space="preserve">
+    <value>Throttle</value>
+  </data>
+  <data name="Throttle.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="ElevatorPitch.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="ElevatorPitch.HeaderText" xml:space="preserve">
+    <value>Elevetor Pitch</value>
+  </data>
+  <data name="ElevatorPitch.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="WarrningCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="WarrningCode.HeaderText" xml:space="preserve">
+    <value>Warrning Code</value>
+  </data>
+  <data name="WarrningCode.Width" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <metadata name="TimeStamp.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="TimeStamp.HeaderText" xml:space="preserve">
+    <value>Time Stamp</value>
+  </data>
+  <data name="TimeStamp.Width" type="System.Int32, mscorlib">
+    <value>120</value>
   </data>
   <data name="&gt;&gt;lblElevatorPitchVal.Name" xml:space="preserve">
     <value>lblElevatorPitchVal</value>
@@ -1169,11 +1214,72 @@
   <data name="&gt;&gt;grbControls.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="lbl05Elevator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lbl05Elevator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="lbl05Elevator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 281</value>
+  </data>
+  <data name="lbl05Elevator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>25, 13</value>
+  </data>
+  <data name="lbl05Elevator.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="lbl05Elevator.Text" xml:space="preserve">
+    <value>-5.0</value>
+  </data>
+  <data name="&gt;&gt;lbl05Elevator.Name" xml:space="preserve">
+    <value>lbl05Elevator</value>
+  </data>
+  <data name="&gt;&gt;lbl05Elevator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl05Elevator.Parent" xml:space="preserve">
+    <value>grbControls</value>
+  </data>
+  <data name="&gt;&gt;lbl05Elevator.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lbl5Elevator.AccessibleDescription" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lbl5Elevator.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lbl5Elevator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 48</value>
+  </data>
+  <data name="lbl5Elevator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>22, 13</value>
+  </data>
+  <data name="lbl5Elevator.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lbl5Elevator.Text" xml:space="preserve">
+    <value>5.0</value>
+  </data>
+  <data name="&gt;&gt;lbl5Elevator.Name" xml:space="preserve">
+    <value>lbl5Elevator</value>
+  </data>
+  <data name="&gt;&gt;lbl5Elevator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lbl5Elevator.Parent" xml:space="preserve">
+    <value>grbControls</value>
+  </data>
+  <data name="&gt;&gt;lbl5Elevator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="lbl0throttle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="lbl0throttle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>14, 230</value>
+    <value>14, 281</value>
   </data>
   <data name="lbl0throttle.Size" type="System.Drawing.Size, System.Drawing">
     <value>21, 13</value>
@@ -1229,12 +1335,11 @@
   <data name="trkElevatorPitch.Location" type="System.Drawing.Point, System.Drawing">
     <value>127, 39</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="trkElevatorPitch.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Vertical</value>
   </data>
   <data name="trkElevatorPitch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 214</value>
+    <value>45, 264</value>
   </data>
   <data name="trkElevatorPitch.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1261,7 +1366,7 @@
     <value>Vertical</value>
   </data>
   <data name="trkThrottle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 214</value>
+    <value>45, 264</value>
   </data>
   <data name="trkThrottle.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -1590,138 +1695,6 @@
   <data name="dataGridViewTextBoxColumn6.Width" type="System.Int32, mscorlib">
     <value>80</value>
   </data>
-  <data name="lbl5Elevator.AccessibleDescription" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="lbl5Elevator.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl5Elevator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>169, 48</value>
-  </data>
-  <data name="lbl5Elevator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>22, 13</value>
-  </data>
-  <data name="lbl5Elevator.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lbl5Elevator.Text" xml:space="preserve">
-    <value>5.0</value>
-  </data>
-  <data name="&gt;&gt;lbl5Elevator.Name" xml:space="preserve">
-    <value>lbl5Elevator</value>
-  </data>
-  <data name="&gt;&gt;lbl5Elevator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl5Elevator.Parent" xml:space="preserve">
-    <value>grbControls</value>
-  </data>
-  <data name="&gt;&gt;lbl5Elevator.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="lbl05Elevator.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lbl05Elevator.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="lbl05Elevator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>166, 230</value>
-  </data>
-  <data name="lbl05Elevator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>25, 13</value>
-  </data>
-  <data name="lbl05Elevator.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lbl05Elevator.Text" xml:space="preserve">
-    <value>-5.0</value>
-  </data>
-  <data name="&gt;&gt;lbl05Elevator.Name" xml:space="preserve">
-    <value>lbl05Elevator</value>
-  </data>
-  <data name="&gt;&gt;lbl05Elevator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbl05Elevator.Parent" xml:space="preserve">
-    <value>grbControls</value>
-  </data>
-  <data name="&gt;&gt;lbl05Elevator.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="Altitude.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Altitude.HeaderText" xml:space="preserve">
-    <value>Altitiude</value>
-  </data>
-  <data name="Altitude.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="Speed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Speed.HeaderText" xml:space="preserve">
-    <value>Speed</value>
-  </data>
-  <data name="Speed.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="Pitch.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Pitch.HeaderText" xml:space="preserve">
-    <value>Pitch</value>
-  </data>
-  <data name="Pitch.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="VerticalSpeed.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="VerticalSpeed.HeaderText" xml:space="preserve">
-    <value>Vertical Speed</value>
-  </data>
-  <data name="VerticalSpeed.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="Throttle.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="Throttle.HeaderText" xml:space="preserve">
-    <value>Throttle</value>
-  </data>
-  <data name="Throttle.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="ElevatorPitch.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="ElevatorPitch.HeaderText" xml:space="preserve">
-    <value>Elevetor Pitch</value>
-  </data>
-  <data name="ElevatorPitch.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="WarrningCode.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="WarrningCode.HeaderText" xml:space="preserve">
-    <value>Warrning Code</value>
-  </data>
-  <data name="WarrningCode.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
-  <metadata name="TimeStamp.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="TimeStamp.HeaderText" xml:space="preserve">
-    <value>Time Stamp</value>
-  </data>
-  <data name="TimeStamp.Width" type="System.Int32, mscorlib">
-    <value>120</value>
-  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -1739,18 +1712,6 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Remote Control</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn5</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
-    <value>dataGridViewTextBoxColumn6</value>
-  </data>
-  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Altitude.Name" xml:space="preserve">
     <value>Altitude</value>
@@ -1798,6 +1759,18 @@
     <value>TimeStamp</value>
   </data>
   <data name="&gt;&gt;TimeStamp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn5</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Name" xml:space="preserve">
+    <value>dataGridViewTextBoxColumn6</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewTextBoxColumn6.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
