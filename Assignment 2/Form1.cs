@@ -42,6 +42,7 @@ namespace Assignment_2
         Thread listeningThread = null;
         ControlsUpdate controlsUpdate;
         TelemetryUpdate telemetryUpdate;
+        bool autoPilotOn = false;
 
 
         public Form1()
@@ -120,17 +121,17 @@ namespace Assignment_2
 
             while (true)
             {
+                 byte[] buffer = new byte[256];
+                 int num_bytes = stream.Read(buffer, 0, 256);
+                 if (num_bytes > 0)
+                 {
+                     string message = Encoding.ASCII.GetString(buffer, 0, num_bytes);
+                     //
+                     //passing messege to deserialisiation and updating grid
+                     //
+                     addMessage(message);
+                 }
 
-                byte[] buffer = new byte[256];
-                int num_bytes = stream.Read(buffer, 0, 256);
-                if (num_bytes > 0)
-                {
-                    string message = Encoding.ASCII.GetString(buffer, 0, num_bytes);
-                    //
-                    //passing messege to deserialisiation and updating grid
-                    //
-                    addMessage(message);
-                }
             }
         }
         //
@@ -219,6 +220,20 @@ namespace Assignment_2
                     lblWarningDisplay.Enabled = false;
                     lblWarningDisplay.Text = "";
                 }
+                //
+                //Switching off autotakeoff button
+                //
+                if(telemetryUpdate.Speed > 40)
+                {
+                    btnTakeOff.Enabled = false;
+                }
+                //
+                //Enabling autoPilot
+                //
+                if (telemetryUpdate.Altitude > 2000 && telemetryUpdate.WarningCode == 0  )
+                {
+                    enableAutoPilot();
+                }
 
             }
         }
@@ -305,15 +320,16 @@ namespace Assignment_2
         {
             Thread autoTakeOffThread= new Thread(autoTakeOff);
             autoTakeOffThread.Start();
-
+            btnTakeOff.Enabled = false;
+            lblAutoInfo.Text = "AUTO TAKO OFF COMMENCE";
+            lblAutoInfo.Enabled = true;
+            trkElevatorPitch.Enabled = false;
+            trkThrottle.Enabled = false;
         }
         //
-        //Sending updated throttle and elevator pitch values
+        //starting auto takeoff thread
+        //and controling steady rise untill optimum altitude and speed
         //
-        private void autoUpdateValues()
-        {
-
-        }
         private void autoTakeOff()
         {
             bool liftOff = true;
@@ -348,11 +364,151 @@ namespace Assignment_2
                     liftOff = false;
                 }
                 Thread.Sleep(500);
-
+            }
+            //
+            //Enebling scrolls back on and hidding info
+            //
+            Invoke(new Action(() =>
+            {
+                trkElevatorPitch.Enabled = true;
+                trkThrottle.Enabled = true;
+                lblAutoInfo.Text = "";
+                lblAutoInfo.Enabled = false;
+            }));
+        }
+        //
+        //Enebling AutoPilot
+        //
+        private void enableAutoPilot()
+        {
+            txtAltAutoPilot.Enabled = true;
+            txtSpeedAutoPilot.Enabled = true;
+            btnAutoPilot.Enabled = true;
+        }
+        //
+        //Autopilot activiation button and setting labels
+        //
+        private void btnAutoPilot_Click(object sender, EventArgs e)
+        {
+            if(!autoPilotOn )
+            {
+                if(entryValidation() == true)
+                {
+                    autoPilotOn = true;
+                    Thread autoPilotThread = new Thread(autoPilot);
+                    autoPilotThread.Start();
+                    btnTakeOff.Enabled = false;
+                    lblAutoInfo.Text = "AUTO PILOT ON";
+                    lblAutoInfo.Enabled = true;
+                    btnAutoPilot.ForeColor = Color.Red;
+                    trkElevatorPitch.Enabled = false;
+                    trkThrottle.Enabled = false;
+                }
+                else
+                {
+                    txtSpeedAutoPilot.Text = "";
+                    txtAltAutoPilot.Text = "";
+                    lblAutoInfo.ForeColor = Color.Red;
+                    lblAutoInfo.Text = "INNCORRECT INPUT";
+                    lblAutoInfo.Enabled = true;
+                }
+            }
+            //
+            //when autopilot is on this will be triggerd and
+            // change labels and info as well as enables scrolls
+            //
+            else
+            {
+                autoPilotOn = false;
+                trkElevatorPitch.Enabled = true;
+                trkThrottle.Enabled = true;
+                btnAutoPilot.ForeColor = Color.Green;
+                lblAutoInfo.Text = "";
+                lblAutoInfo.Enabled = false;
             }
         }
+        //
+        //autoPilot control and adjusting values
+        //
+        private void autoPilot()
+        {
+            while(autoPilotOn)
+            {
+                //
+                //incresse speed if too low
+                //
+                if(telemetryUpdate.Speed < Int32.Parse(txtSpeedAutoPilot.Text))
+                Invoke(new Action(() =>
+                {
+                    trkThrottle.Value = 90;
+                    trkThrottle_Scroll(null, null);
+                }));
+                //
+                //decresse speed if too fast
+                //
+                if (telemetryUpdate.Speed > Int32.Parse(txtSpeedAutoPilot.Text))
+                    Invoke(new Action(() =>
+                    {
+                        trkThrottle.Value = 60;
+                        trkThrottle_Scroll(null, null);
+                    }));
+                //
+                //go up if altitude too low
+                //
+                if (telemetryUpdate.Altitude < Int32.Parse(txtAltAutoPilot.Text))
+                    Invoke(new Action(() =>
+                    {
+                        trkElevatorPitch.Value = 20;
+                        trkElevetorPitch_Scroll(null, null);
+                    }));
+                //
+                //go down if altitude to high
+                //
+                if (telemetryUpdate.Altitude > Int32.Parse(txtAltAutoPilot.Text))
+                    Invoke(new Action(() =>
+                    {
+                        trkElevatorPitch.Value = 10;
+                        trkElevetorPitch_Scroll(null, null);
+                    }));
+                Thread.Sleep(500);
+            }
+        }
+        //
+        //autopilot input validation
+        //
+        private bool entryValidation()
+        {
+            //
+            //checking if correct data inputed
+            //
+            if (txtAltAutoPilot.Text == "")
+                return false;
+            if (txtSpeedAutoPilot.Text == "")
+                return false;
+
+            foreach (char c in txtAltAutoPilot.Text)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+            foreach (char c in txtSpeedAutoPilot.Text)
+            {
+                if (c < '0' || c > '9')
+                    return false;
+            }
+            //
+            //validatin if autopilt within range
+            //
+            if (Int32.Parse(txtAltAutoPilot.Text) < 6000 || Int32.Parse(txtAltAutoPilot.Text) > 18000)
+                return false;
+            if (Int32.Parse(txtSpeedAutoPilot.Text) < 200 || Int32.Parse(txtSpeedAutoPilot.Text) > 500)
+                return false;
+
+            return true;
+        }
+
+
     }
 }
-
 
 

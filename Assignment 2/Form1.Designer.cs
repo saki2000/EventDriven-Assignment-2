@@ -79,6 +79,7 @@ namespace Assignment_2
             this.lblWarningDisplay = new System.Windows.Forms.Label();
             this.grbWarnings = new System.Windows.Forms.GroupBox();
             this.grbAutomaticControls = new System.Windows.Forms.GroupBox();
+            this.lblAutoInfo = new System.Windows.Forms.Label();
             this.btnAutoPilot = new System.Windows.Forms.Button();
             this.lblAutoPilotAlt = new System.Windows.Forms.Label();
             this.lblAutoPilotSpeed = new System.Windows.Forms.Label();
@@ -409,6 +410,7 @@ namespace Assignment_2
             // 
             // grbAutomaticControls
             // 
+            this.grbAutomaticControls.Controls.Add(this.lblAutoInfo);
             this.grbAutomaticControls.Controls.Add(this.btnAutoPilot);
             this.grbAutomaticControls.Controls.Add(this.lblAutoPilotAlt);
             this.grbAutomaticControls.Controls.Add(this.lblAutoPilotSpeed);
@@ -419,12 +421,19 @@ namespace Assignment_2
             this.grbAutomaticControls.Name = "grbAutomaticControls";
             this.grbAutomaticControls.TabStop = false;
             // 
+            // lblAutoInfo
+            // 
+            resources.ApplyResources(this.lblAutoInfo, "lblAutoInfo");
+            this.lblAutoInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.lblAutoInfo.Name = "lblAutoInfo";
+            // 
             // btnAutoPilot
             // 
             resources.ApplyResources(this.btnAutoPilot, "btnAutoPilot");
-            this.btnAutoPilot.ForeColor = System.Drawing.Color.Red;
+            this.btnAutoPilot.ForeColor = System.Drawing.Color.Green;
             this.btnAutoPilot.Name = "btnAutoPilot";
             this.btnAutoPilot.UseVisualStyleBackColor = true;
+            this.btnAutoPilot.Click += new System.EventHandler(this.btnAutoPilot_Click);
             // 
             // lblAutoPilotAlt
             // 
@@ -471,7 +480,6 @@ namespace Assignment_2
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ControlBox = false;
             this.Controls.Add(this.dgvSend);
             this.Controls.Add(this.grbWarnings);
             this.Controls.Add(this.grbAutomaticControls);
@@ -482,6 +490,7 @@ namespace Assignment_2
             this.Controls.Add(this.dgvRecived);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.grbDataRecived);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecived)).EndInit();
             this.grbDataRecived.ResumeLayout(false);
@@ -564,6 +573,7 @@ namespace Assignment_2
         private System.Windows.Forms.Label lblAutoPilotSpeed;
         private System.Windows.Forms.TextBox txtAltAutoPilot;
         private System.Windows.Forms.TextBox txtSpeedAutoPilot;
+        private System.Windows.Forms.Label lblAutoInfo;
     }
 }
 
