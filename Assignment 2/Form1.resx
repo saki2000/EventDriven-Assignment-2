@@ -224,6 +224,9 @@
   <data name="&gt;&gt;lblConnectionStatus.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="btnTakeOff.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="btnTakeOff.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt, style=Bold</value>
   </data>
@@ -1047,7 +1050,7 @@
     <value>348, 81</value>
   </data>
   <data name="grbJsonSend.Size" type="System.Drawing.Size, System.Drawing">
-    <value>863, 56</value>
+    <value>974, 56</value>
   </data>
   <data name="grbJsonSend.TabIndex" type="System.Int32, mscorlib">
     <value>25</value>
@@ -1071,7 +1074,7 @@
     <value>348, 19</value>
   </data>
   <data name="grbJsonRecived.Size" type="System.Drawing.Size, System.Drawing">
-    <value>863, 56</value>
+    <value>974, 56</value>
   </data>
   <data name="grbJsonRecived.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1494,6 +1497,102 @@
   <data name="&gt;&gt;grbWarnings.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;lblAutoInfo.Name" xml:space="preserve">
+    <value>lblAutoInfo</value>
+  </data>
+  <data name="&gt;&gt;lblAutoInfo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAutoInfo.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;lblAutoInfo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnAutoPilot.Name" xml:space="preserve">
+    <value>btnAutoPilot</value>
+  </data>
+  <data name="&gt;&gt;btnAutoPilot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAutoPilot.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;btnAutoPilot.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotAlt.Name" xml:space="preserve">
+    <value>lblAutoPilotAlt</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotAlt.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotAlt.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotAlt.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotSpeed.Name" xml:space="preserve">
+    <value>lblAutoPilotSpeed</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotSpeed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotSpeed.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;lblAutoPilotSpeed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;txtAltAutoPilot.Name" xml:space="preserve">
+    <value>txtAltAutoPilot</value>
+  </data>
+  <data name="&gt;&gt;txtAltAutoPilot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtAltAutoPilot.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;txtAltAutoPilot.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtSpeedAutoPilot.Name" xml:space="preserve">
+    <value>txtSpeedAutoPilot</value>
+  </data>
+  <data name="&gt;&gt;txtSpeedAutoPilot.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSpeedAutoPilot.Parent" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;txtSpeedAutoPilot.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="grbAutomaticControls.Location" type="System.Drawing.Point, System.Drawing">
+    <value>261, 304</value>
+  </data>
+  <data name="grbAutomaticControls.Size" type="System.Drawing.Size, System.Drawing">
+    <value>187, 309</value>
+  </data>
+  <data name="grbAutomaticControls.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="grbAutomaticControls.Text" xml:space="preserve">
+    <value>Automatic Controls</value>
+  </data>
+  <data name="&gt;&gt;grbAutomaticControls.Name" xml:space="preserve">
+    <value>grbAutomaticControls</value>
+  </data>
+  <data name="&gt;&gt;grbAutomaticControls.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;grbAutomaticControls.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;grbAutomaticControls.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <data name="lblAutoInfo.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -1661,30 +1760,6 @@
   </data>
   <data name="&gt;&gt;txtSpeedAutoPilot.ZOrder" xml:space="preserve">
     <value>5</value>
-  </data>
-  <data name="grbAutomaticControls.Location" type="System.Drawing.Point, System.Drawing">
-    <value>261, 304</value>
-  </data>
-  <data name="grbAutomaticControls.Size" type="System.Drawing.Size, System.Drawing">
-    <value>187, 309</value>
-  </data>
-  <data name="grbAutomaticControls.TabIndex" type="System.Int32, mscorlib">
-    <value>30</value>
-  </data>
-  <data name="grbAutomaticControls.Text" xml:space="preserve">
-    <value>Automatic Controls</value>
-  </data>
-  <data name="&gt;&gt;grbAutomaticControls.Name" xml:space="preserve">
-    <value>grbAutomaticControls</value>
-  </data>
-  <data name="&gt;&gt;grbAutomaticControls.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;grbAutomaticControls.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;grbAutomaticControls.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <metadata name="dataGridViewTextBoxColumn5.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -2960,7 +3035,7 @@
 </value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Remote Control</value>
+    <value>Remote Control - 30012104</value>
   </data>
   <data name="&gt;&gt;Altitude.Name" xml:space="preserve">
     <value>Altitude</value>

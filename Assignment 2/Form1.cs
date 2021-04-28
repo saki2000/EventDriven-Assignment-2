@@ -145,6 +145,7 @@ namespace Assignment_2
             btnTakeOff.Enabled = true;
             trkThrottle.Enabled = true;
             trkElevatorPitch.Enabled = true;
+            btnTakeOff.Enabled = true;
             lblConnectionStatus.Text = "Connection Status: Connected";
             lblConnectionStatus.ForeColor = Color.Green;
         }
@@ -175,8 +176,7 @@ namespace Assignment_2
                 telemetryUpdate.VerticalSpeed = recievedMessage.VerticalSpeed;
                 telemetryUpdate.Throttle = recievedMessage.Throttle;
                 telemetryUpdate.ElevatorPitch = recievedMessage.ElevatorPitch;
-
-
+                telemetryUpdate.WarningCode = recievedMessage.WarningCode;
 
                 //
                 //Updating current information labels with rounding to 2decimal places
@@ -279,7 +279,7 @@ namespace Assignment_2
             byte[] rawData = Encoding.ASCII.GetBytes(jsonString);   // serializing data
             stream.Write(rawData, 0, rawData.Length);               // writting to stream
             //
-            // passing json string and struct so no deserlizsation will be needed
+            // passing json string 
             //
             addSendMessage(jsonString);
         }
@@ -366,7 +366,7 @@ namespace Assignment_2
                 Thread.Sleep(500);
             }
             //
-            //Enebling scrolls back on and hidding info
+            //Enabling scrolls back on and hidding info
             //
             Invoke(new Action(() =>
             {
@@ -458,7 +458,7 @@ namespace Assignment_2
                 if (telemetryUpdate.Altitude < Int32.Parse(txtAltAutoPilot.Text))
                     Invoke(new Action(() =>
                     {
-                        trkElevatorPitch.Value = 20;
+                        trkElevatorPitch.Value = 10;
                         trkElevetorPitch_Scroll(null, null);
                     }));
                 //
@@ -467,7 +467,7 @@ namespace Assignment_2
                 if (telemetryUpdate.Altitude > Int32.Parse(txtAltAutoPilot.Text))
                     Invoke(new Action(() =>
                     {
-                        trkElevatorPitch.Value = 10;
+                        trkElevatorPitch.Value = -2;
                         trkElevetorPitch_Scroll(null, null);
                     }));
                 Thread.Sleep(500);
