@@ -184,7 +184,7 @@ namespace Assignment_2
                 //
 
                 lblAltitudeVal.Text = Math.Round(telemetryUpdate.Altitude, 2).ToString();
-                lblAltitude.Refresh();
+                lblAltitudeVal.Refresh();
                 lblSpeedVal.Text = Math.Round(telemetryUpdate.Speed, 2).ToString();
                 lblSpeedVal.Refresh();
                 lblPitchVal.Text = Math.Round(telemetryUpdate.Pitch, 2).ToString();
